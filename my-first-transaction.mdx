@@ -91,3 +91,20 @@
     coda client status
 
 ## Совершаем платеж
+
+Наконец мы добрались до самого интересного места, отправки нашей первой транзакции! Для тестирования уже есть [эхо сервис](https://github.com/CodaProtocol/coda-automation/tree/master/services/echo) отправив на него ваши coda, он немедленно вернет ваш платеж за вычетом комиссии за транзакцию.
+
+<Alert kind="warning">
+
+В данный момент есть известная проблема с эхо сервисом которая препятствует возврату вашего платежа! Не волнуйтесь мы все еще даем тестнет очки[\*](#disclaimer) за выполнения заданий.
+
+</Alert>
+
+Давайте уже отправим недавно полученные coda на этот сервис чтобы увидеть как выглядит наш платеж:
+
+    coda client send-payment \
+      -amount 20 \
+      -receiver 4vsRCVNep7JaFhtySu6vZCjnArvoAhkRscTy5TQsGTsKM4tJcYVc3uNUMRxQZAwVzSvkHDGWBmvhFpmCeiPASGnByXqvKzmHt4aR5uAWAQf3kqhwDJ2ZY3Hw4Dzo6awnJkxY338GEp12LE4x \
+      -fee 5 \
+      -sender $YOUR_PUBLIC_KEY
+      
